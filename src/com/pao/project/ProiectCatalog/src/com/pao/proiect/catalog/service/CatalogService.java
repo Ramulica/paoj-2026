@@ -17,10 +17,8 @@ import java.util.Map;
 public class CatalogService {
     private static CatalogService instance;
 
-    // Relatia: Elev (prin Matricola) -> Materie -> Lista de note
     private final Map<Matricola, Map<Materie, List<Nota>>> noteCatalog;
 
-    // Relatia: Elev (prin Matricola) -> Lista de absente
     private final Map<Matricola, List<Absenta>> absenteCatalog;
 
     private CatalogService() {
@@ -36,10 +34,8 @@ public class CatalogService {
     }
 
     public void adaugaNota(Matricola matricola, Nota nota) throws ElevNotFoundException {
-        // Validari (evitare NullPointerException)
         if (nota == null || nota.getMaterie() == null) return;
 
-        // Verificam daca elevul exista delegand catre celalalt serviciu
         ElevService.getInstance().gasesteDupaMatricola(matricola);
 
         if (nota.getValoare() < 1 || nota.getValoare() > 10) {
@@ -57,7 +53,7 @@ public class CatalogService {
         if (noteCatalog.containsKey(matricola) && noteCatalog.get(matricola).containsKey(materie)) {
             return noteCatalog.get(matricola).get(materie);
         }
-        return new ArrayList<>(); // returnam o lista goala daca nu are note
+        return new ArrayList<>();
     }
 
     public double calculeazaMedie(Matricola matricola, Materie materie) {

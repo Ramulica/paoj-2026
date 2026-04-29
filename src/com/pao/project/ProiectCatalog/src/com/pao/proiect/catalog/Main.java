@@ -29,7 +29,6 @@ public class Main {
         Elev elev2 = new Elev("Avram", "Mihai", m2, clasa10A);
         Elev elev3 = new Elev("Radu", "Cristina", m3, clasa10A);
 
-        System.out.println("=== TESTARE CELE 10 ACTIUNI (PROIECT ETAPA 1) ===\n");
 
         System.out.println("--- Actiunea 1: Adauga Elevi ---");
         elevService.adaugaElev(elev1);
