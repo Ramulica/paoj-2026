@@ -21,10 +21,15 @@ Materiale și resurse pentru cursul **Programare Avansată pe Obiecte în Java**
 | [laboratory06](src/com/pao/laboratory06/Readme.md) | Interfețe și clase — studiu detaliat (Comparable, Comparator, callback, extindere) |
 | [laboratory07](src/com/pao/laboratory07/Readme.md) | Sealed classes și enum-uri — concepte avansate                    |
 | [laboratory08](src/com/pao/laboratory08/Readme.md) | Interfețe marker, clonare superficială/profundă și introducere fluxuri I/O |
+| [laboratory09](src/com/pao/laboratory09/Readme.md) | Fluxuri I/O avansate: DataInputStream/DataOutputStream, RandomAccessFile, ByteBuffer, try-with-resources, Serializable |
+| [laboratory10](src/com/pao/laboratory10/Readme.md) | Predicate, compoziție de reguli, Lambda avansat, Comparator complex, Stream API aplicat |
+| [laboratory11](src/com/pao/laboratory11/Readme.md) | Collector custom, snapshot imutabil, motor de reguli antifraudă (exerciții) |
 
 - `laboratory07` a introdus construcțiile mai noi din limbaj: `sealed` classes și un studiu mai aprofundat al `enum`-urilor.
 - `laboratory08` acoperă interfețele marker (`Cloneable`, `Serializable`), clonarea superficială vs. profundă și introducerea în fluxuri de I/O (`FileReader`, `BufferedReader`, `BufferedWriter`).
 - `laboratory09` va aprofunda fluxurile de I/O: `DataInputStream`/`DataOutputStream`, `RandomAccessFile`, `ByteBuffer`, `try-with-resources` și `Serializable` ca exercițiu obligatoriu.
+- `laboratory10` abordează expresii lambda avansate, `Predicate` și compoziția de reguli (exerciții cu motor de reguli), plus utilizarea avansată a `Stream` API-ului și `Comparator`-ilor compuși.
+- `laboratory11` se concentrează pe colecții avansate și agregare: implementarea unui `Collector` custom, snapshot-uri imutabile și integrarea unui mic motor de reguli antifraudă (exerciții 1–3).
 
 Începând cu **laboratory04**, soluțiile se trimit pe GitHub la un fork personal al acestui repo.
 **Data limită:** vineri, ora 23:59, în fiecare săptămână. Mai multe detalii doua sectiuni mai jos (TODO adauga link)
@@ -43,17 +48,17 @@ Steps needed to run the tests:
 
 
 1. In IntelliJ
-   
+
    > Right-click the jar
-   > 
+   >
    > → "Add as Library"
-   > 
+   >
    > → Select your project Module
-   > 
+   >
    > → Ok (button).
 
 2. In VS Code: Update your .classpath or launch config if needed.
-   - Example .classpath entry:
+    - Example .classpath entry:
    ```xml
    <classpathentry kind="lib" path="src/com/pao/test/utils/java-diff-utils-4.15.jar"/>
    ```

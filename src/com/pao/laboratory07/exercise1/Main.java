@@ -1,13 +1,13 @@
-//package com.pao.laboratory07.exercise1;
-//
+package com.pao.laboratory07.exercise1;
+
 //import com.pao.laboratory07.exercise1.exceptions.CannotCancelFinalOrderException;
 //import com.pao.laboratory07.exercise1.exceptions.CannotRevertInitialOrderStateException;
 //import com.pao.laboratory07.exercise1.exceptions.OrderIsAlreadyFinalException;
-//
-//import java.util.Scanner;
-//
-//public class Main {
-//    public static void main(String[] args) {
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
 //        Scanner scanner = new Scanner(System.in);
 //        // Part A
 //        // load initial state
@@ -45,5 +45,5 @@
 //                }
 //            }
 //        }
-//    }
-//}
+    }
+}
